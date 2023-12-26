@@ -1,0 +1,624 @@
+<br>
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#define PI 3.14
+
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void modulus();
+void factorial();
+void power();
+void square();
+void cube();
+void squareroot();
+void cuberoot();
+void logBase_e();
+void logBase_10();
+void eToThePower_x();
+void absolute_value();
+void npr();
+void ncr();
+void sine();
+void cosine();
+void tangent();
+void sineinverse();
+void cosineinverse();
+void tangentinverse();
+
+
+int main()
+{
+    printf("\n");
+    printf("\n");
+    printf("\t");
+    printf("\t");
+    printf("Welcome to the scientific calculator!!");
+    printf("\n");
+    printf("\n");
+    int choice;
+    int choice1;
+    int choice2;
+    printf("\n******* Press 0 to quit the program ********\n");
+    printf("\n");
+    printf("Enter 1 for Addition");
+    printf("\n");
+    printf("\n");
+    printf("Enter 2 for Subtraction");
+    printf("\n");
+    printf("\n");
+    printf("Enter 3 for Multiplication ");
+    printf("\n");
+    printf("\n");
+    printf("Enter 4 for Division ");
+    printf("\n");
+    printf("\n");
+    printf("Enter 5 for Remainder");
+    printf("\n");
+    printf("\n");
+    printf("Enter 6 for Factorial   ");
+    printf("\n");
+    printf("\n");
+    printf("Enter 7 for power");
+    printf("\n");
+    printf("\n");
+    printf("Enter 8  for Square ");
+    printf("\n");
+    printf("\n");
+    printf("Enter 9  for Cube ");
+    printf("\n");
+    printf("\n");
+    printf("Enter 10 for Squareroot");
+    printf("\n");
+    printf("\n");
+    printf("Enter 11 for Cuberoot");
+    printf("\n");
+    printf("\n");
+    printf("Enter 12 for logbase e");
+    printf("\n");
+    printf("\n");
+    printf("Enter 13 for logbase 10");
+    printf("\n");
+    printf("\n");
+    printf("Enter 14 for e^x");
+    printf("\n");
+    printf("\n");
+    printf("Enter 15 for Absolute Value");
+    printf("\n");
+    printf("\n");
+    printf("Enter 16 for Permutation");
+    printf("\n");
+    printf("\n");
+    printf("Enter 17 for Combition");
+    printf("\n");
+    printf("\n");
+    printf("Enter 18 for Trignometric function");
+    printf("\n");
+    printf("\n");    
+    printf("Enter the operation you want to do: ");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+                case 1:
+                    addition();
+                    break;
+                case 2:
+                    subtraction();
+                    break;
+                case 3:
+                    multiplication();
+                    break;
+                case 4:
+                    division();
+                    break;
+                case 5:
+                    modulus();
+                    break;
+                case 6:
+                    factorial();
+                    break;
+                case 7:
+                    power();
+                    break;
+                case 8:
+                    square();
+                    break;
+                case 9:
+                    cube();
+                    break;
+                case 10:
+                   squareroot();
+                   break;
+                case 11:
+                   cuberoot();
+                   break;
+                case 12:
+                   logBase_e();
+                   break;
+                case 13:
+                   logBase_10();
+                   break;
+                case 14:
+                    eToThePower_x();
+                    break;
+                case 15:
+                    absolute_value();
+                    break;
+                case 16:
+                    npr();
+                    break;
+                case 17:
+                    ncr();
+                    break;
+                
+}
+if(choice==18)
+{
+    int choice1;
+                printf("Enter 1 for sine");
+                printf("\n");
+                printf("\n");
+                printf("Enter 2 for cosine");
+                printf("\n");
+                printf("\n");
+                printf("Enter 3 for tangent");
+                printf("\n");
+                printf("\n");
+                printf("Enter 4 for sine inverse");
+                printf("\n");
+                printf("\n");
+                printf("Enter 5 for cosine inverse");
+                printf("\n");
+                printf("\n");
+                printf("Enter 6 for tangent inverse");
+                printf("\n");
+                printf("\n");
+                printf("Enter the choice-");
+                printf("\n");
+                printf("\n");
+                scanf("%d",&choice1);
+                switch(choice1)
+                {
+                    case 1:
+                    sine();
+                    break;
+                    case 2:
+                    cosine();
+                    break;
+                    case 3:
+                    tangent();
+                    break;
+                    case 4:
+                    sineInverse();
+                    break; 
+                    case 5:
+                    cosineInverse();
+                    break;
+                    case 6:
+                    tangentInverse();
+                    break;                    
+                }
+}
+    return 0;
+}
+
+
+// Function to add number
+void addition()
+{
+    printf("\n");
+    int a;
+    int b;
+    int c;
+    printf("Enter 1st number : ");
+    scanf("%d",&a);
+    printf("\n");
+    printf("Enter 2nd number : ");
+    scanf("%d",&b);
+    printf("\n");
+    c=a+b;
+    printf("Sum of %d and %d is %d",a,b,c);
+    printf("\n");
+    printf("\n");
+}
+// Function to subtract number
+void subtraction()
+{
+    printf("\n");
+    int a;
+    int b;
+    int c;
+    printf("Enter 1st number : ");
+    scanf("%d",&a);
+    printf("\n");
+    printf("Enter 2nd number : ");
+    scanf("%d",&b);
+    printf("\n");
+    c=a-b;
+    printf("Subtraction of %d and %d is %d",a,b,c);
+    printf("\n");
+    printf("\n");
+}
+//  Function to multiply numbers
+void multiplication()
+{
+    printf("\n");
+    int a;
+    int b;
+    int c;
+    printf("Enter 1st number : ");
+    scanf("%d",&a);
+    printf("\n");
+    printf("Enter 2nd number : ");
+    scanf("%d",&b);
+    printf("\n");
+    c=a*b;
+    printf("The multiply of %d and %d is %d",a,b,c);
+    printf("\n");
+    printf("\n"); 
+}
+// Function to divide number
+void division()
+{
+    printf("\n");
+    int a,b;
+    float c;
+    printf("Enter the 1st number : ");
+    scanf("%d",&a);
+    printf("\n");
+    printf("Enter the 2nd number : ");
+    scanf("%d",&b);
+    printf("\n");
+    c=a/b;
+    if(b==0)
+    {
+        printf("Math Error ");
+    }
+    else 
+    {
+    printf("Division of %d and %d is %f",a,b,c);
+    }
+    printf("\n");
+    printf("\n"); 
+}
+// Function to find remainder
+void modulus()
+{
+    printf("\n");
+    int a;
+    int b;
+    int c;
+    printf("Enter 1st number : ");
+    scanf("%d",&a);
+    printf("\n");
+    printf("Enter 1st number : ");
+    scanf("%d",&b);
+    printf("\n");
+    c=a%b;
+    printf("The multiply of %d and %d is %d",a,b,c);
+    printf("\n");
+    printf("\n"); 
+}
+// Function to find factorial
+void factorial()
+{
+    int a;
+    int product;
+    product =1;
+    printf("\n");
+    printf("Enter the number to find the factorial: ");
+    scanf("%d",&a);
+    for(int i=1;i<=a;i++)
+    {
+    product =product*i;
+    }
+    printf("\n");
+    printf("The factorial of %d is %d ",a,product);
+    printf("\n");
+    printf("\n");
+}
+// Function to find the power
+void power()
+{
+    double b;
+    double p;
+    double e;
+    printf("\n");
+    printf("Enter the base : ");
+    scanf("%2lf",&b);
+    printf("\n");
+    printf("Enter the power : ");
+    scanf("%2lf",&p);
+    e=pow(b,p);
+    printf("\n"); 
+    printf("The power is %2lf",e);
+    printf("\n");
+    printf("\n");
+}
+// Function to find the Square
+void square()
+{
+    double b;
+    double p;
+    printf("\n");
+    printf("Enter the number you want the square of: ");
+    scanf("%2lf",&b);
+    p=pow(b,2);
+    printf("\n");
+    printf("The square of %2f is %2lf",b,p);
+    printf("\n");
+    printf("\n");
+}
+// Function to find the Cube
+void cube()
+{
+    double b;
+    double p;
+    printf("\n");
+    printf("Enter the number you want the cube of: ");
+    scanf("%2lf",&b);
+    p=pow(b,3);
+    printf("\n");
+    printf("The cube of %2lf is %2lf",b,p);
+    printf("\n");
+    printf("\n");
+}
+// Function to find the Square root
+void squareroot()
+{
+    double b;
+    double s;
+    printf("\n");
+    printf("Enter the number you want the square root of : ");
+    scanf("%2lf",&b);
+    s = sqrt(b);
+    printf("\n");
+    printf("The square root of %2f is %2f",b,s);
+    printf("\n");
+    printf("\n");
+}
+// Function to find the Cube root
+void cuberoot()
+{
+    double b;
+    double c;
+    printf("\n");
+    printf("Enter the number you want the cube root of : ");
+    scanf("%2lf",&b);
+    c = cbrt(b);
+    printf("\n");
+    printf("The cube root of %2lf is %2lf",b,c);
+    printf("\n");
+    printf("\n");
+}
+// Function to calculate log (base e)
+void logBase_e()
+{
+    double a;
+    double b;
+    printf("\n");
+    printf("Enter a number: ");
+    scanf("%lf", &a);
+    if(a<=0.0)
+    {
+    printf("Math Error\n");
+    }
+    else
+    {
+    b = log(a);
+    printf("\n");
+    printf("Log Basee = %lf", b);
+    }
+}
+// Function to calculate log (base 10)
+void logBase_10()
+{
+    double a;
+    double b;
+    printf("\n");
+    printf("Enter a number: ");
+    scanf("%lf", &a);
+    if(a<=0.0)
+    {
+    printf("Math Error");
+    printf("\n");
+    }
+    else
+    {
+    b = log10(a);
+    printf("\n");
+    printf("Log Base 10 = %lf", b);
+    }
+}
+// Function to calculate e^x
+void eToThePower_x()
+{
+    double a;
+    double b;
+    printf("Enter a number: ");
+    scanf("%lf", &a);
+    b = exp(a);
+    printf("\n");
+    printf("e to the power %f = %lf",a, b);
+    printf("\n");
+}
+// Function to find the Absolute Value of a Number
+void absolute_value()
+{
+    int a;
+    printf("\n");
+    printf("Enter the number to find its absolute value : ");
+    scanf("%d",&a);
+    printf("\n");
+    a= abs(a);
+    printf("Absolute value of a is %d", a);
+    printf("\n");
+    printf("\n");
+}
+// Function to calculate Permutations (nPr)
+void npr()
+{
+    int n;
+    int r;
+    int c;
+    int product;
+    int product1;
+    printf("\n");
+    printf("Enter N: ");
+    scanf("%d", &n);
+    printf("\n");
+    printf("Enter R: ");
+    scanf("%d",&r);
+    product =1;
+    product1=1;
+     for(int i=1;i<=n;i++)
+    {
+    product =product*i;
+    }
+     for(int i=1;i<=n-r;i++)
+    {
+    product1 =product1*i;
+    }
+    if(n>=r && n>0 && r>=0)
+    {
+    c= product / product1;
+    printf("\n");
+    printf("%dP%d = %d",n,r, c);
+    printf("\n");
+    printf("\n");
+    }
+    else
+    {
+    printf("\n");
+    printf("Math Error\n");
+    printf("\n");
+    printf("\n");
+    }
+}
+
+// Function to calculate Combinations (nCr)
+void ncr()
+{
+    int n;
+    int r;
+    int c;
+    int product;
+    int product1;
+    product=1;
+    product1=1;
+    printf("\n");
+    printf("Enter N: ");
+    scanf("%d", &n);
+    printf("\n");
+    printf("Enter R: ");
+    scanf("%d",&r);
+     for(int i=1;i<=n;i++)
+    {
+    product =product*i;
+    }
+     for(int i=1;i<=n-r;i++)
+    {
+    product1 =product1*i;
+    }
+    if(n>=r && n>0 && r>=0)
+    {
+    c =(product / (r* product1));
+    printf("\n");
+    printf("%dC%d = %d",n,r,c);
+    printf("\n");
+    printf("\n");
+    }
+    else
+    {
+    printf("\n");
+    printf("Math Error\n");
+    printf("\n");
+    printf("\n");
+    }
+}
+
+void sine()
+{
+    double angle_degrees, angle_radians, result;
+    printf("\n");
+    printf("Enter an angle in degrees: ");
+    scanf("%lf", &angle_degrees);
+    angle_radians = angle_degrees * M_PI / 180.0;
+    result = sin(angle_radians);
+    printf("The sine of %.2lf degrees is %.4lf\n", angle_degrees, result);
+}
+
+void cosine()
+{
+double angle_degrees, angle_radians, result;
+    printf("\n");
+    printf("Enter an angle in degrees: ");
+    scanf("%lf", &angle_degrees);
+    angle_radians = angle_degrees * M_PI / 180.0;
+    result = cos(angle_radians);
+    printf("The cosine of %.2lf degrees is %.4lf\n", angle_degrees, result);
+}
+
+void tangent()
+{
+    double angle_degrees, angle_radians, result;
+    printf("\n");
+    printf("Enter an angle in degrees: ");
+    scanf("%lf", &angle_degrees);
+    angle_radians = angle_degrees * M_PI / 180.0;
+    result = tan(angle_radians);
+    printf("The tangent of %.2lf degrees is %.4lf\n", angle_degrees, result);
+}
+
+void sineInverse()
+{
+    double n;
+    double result;
+    printf("\nEnter a number: ");
+    scanf("%lf",&n);
+    printf("\n");
+    if(n>1 || n<-1)  
+    {
+        printf("Not in Range");
+    }
+    else
+    {
+        result = asin(n);
+        printf("Inverse of sin(%.2f) = %.2lf in radians\n", n, result);
+      printf("\n");
+        result = asin(n)*180/PI;
+        printf("Inverse of sin(%.2f) = %.2lf in degrees\n", n, result);
+    }
+}
+void cosineInverse()
+{
+    double n;
+    double result;
+    printf("\nEnter a number: ");
+    scanf("%lf",&n);
+    if(n>1 || n<-1)  
+    {
+        printf("\nNot in Range");
+    }
+    else
+    {
+        result = acos(n);
+        printf("\nInverse of cos(%.2f) = %.2lf in radians\n", n, result);
+        result = acos(n)*180/PI;
+        printf("\nInverse of cos(%.2f) = %.2lf in degrees\n", n, result);
+    }
+}
+
+void tangentInverse()
+{
+    double n;
+    double result;
+    printf("\nEnter a number: ");
+    scanf("%lf",&n);
+    result = atan(n);
+    printf("\nInverse of tan(%.2f) = %.2f in radians", n, result);
+    result = (result * 180) / PI;
+    printf("\nInverse of tan(%.2f) = %.2f in degrees", n, result);
+}
